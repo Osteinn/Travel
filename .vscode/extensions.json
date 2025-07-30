@@ -1,0 +1,16 @@
+{
+  "recommendations": [],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-css-peek",
+    "bradlc.vscode-tailwindcss", 
+    "formulahendry.auto-rename-tag",
+    "ms-vscode.live-server",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "ms-vscode.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-html-language-features",
+    "ms-vscode.vscode-css-language-features",
+    "ms-vscode.vscode-json-languageservice"
+  ]
+}

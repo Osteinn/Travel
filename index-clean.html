@@ -101,6 +101,18 @@
             background: var(--accent-green);
             color: white;
         }
+        .cta-btn-white {
+            background: white;
+            color: var(--primary-green);
+            border-color: white;
+            padding: 12px 32px;
+        }
+        .cta-btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 32px;
+        }
         h1 { font-size: 2.2rem; margin-bottom: 1rem; }
         .lead { font-size: 1.1rem; margin-bottom: 1.5rem; }
         .navbar { 
@@ -121,16 +133,19 @@
         .justify-content-center { justify-content: center; }
         .justify-content-between { justify-content: space-between; }
         .text-center { text-align: center; }
+        .text-end { text-align: right; }
         .text-white { color: white; }
         .w-100 { width: 100%; }
         .h-100 { height: 100%; }
         .mb-0 { margin-bottom: 0; }
+        .mb-1 { margin-bottom: 0.25rem; }
         .mb-2 { margin-bottom: 0.5rem; }
         .mb-3 { margin-bottom: 1rem; }
         .mb-4 { margin-bottom: 1.5rem; }
         .mb-5 { margin-bottom: 2rem; }
         .mt-5 { margin-top: 2rem; }
         .p-2 { padding: 0.5rem; }
+        .p-3 { padding: 1rem; }
         .p-4 { padding: 1.5rem; }
         .py-5 { padding: 1.5rem 0; }
         .me-1 { margin-right: 0.25rem; }
@@ -200,6 +215,7 @@
         .bg-info { background-color: #17a2b8; }
         .bg-warning { background-color: #ffc107; color: #212529; }
         .bg-primary { background-color: var(--primary-green); }
+        .bg-danger { background-color: #dc3545; }
         .bg-light { background-color: #f8f9fa; }
         .bg-dark { background-color: var(--dark-green); }
         
@@ -213,12 +229,25 @@
         .btn-lg { padding: 12px 24px; font-size: 14px; }
         .btn-sm { padding: 6px 12px; font-size: 12px; }
         .flex-wrap { flex-wrap: wrap; }
-        .icon-circle-80 { width: 80px; height: 80px; font-size: 24px; }
+        .icon-circle-80 { 
+            width: 80px; 
+            height: 80px; 
+            font-size: 24px; 
+            margin: 0 auto;
+        }
+        .icon-circle-orange { background: linear-gradient(135deg, #ff8c42, #ff6b1a); }
+        .icon-circle-teal { background: linear-gradient(135deg, #20b2aa, #008b8b); }
+        .icon-circle-purple { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
         .object-fit-cover { object-fit: cover; }
         .rounded-pill { border-radius: 50px; }
         .small { font-size: 12px; }
         .text-decoration-none { text-decoration: none; }
         .list-unstyled { list-style: none; padding: 0; }
+        .text-success { color: #28a745; }
+        .text-info { color: #17a2b8; }
+        .cta-container { z-index: 2; }
+        .footer-hr { margin: 2rem 0; border-color: #495057; }
+        .footer-text-right { text-align: right; }
         
         /* Адаптация под ноутбук */
         @media (min-width: 1200px) and (max-width: 1600px) {
@@ -291,7 +320,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - БЕЗ прозрачной панели поиска -->
     <section id="home" class="position-relative hero-section">
         <div class="position-absolute w-100 h-100">
             <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" class="w-100 h-100 object-fit-cover" alt="European Digital Nomad Destination" crossorigin="anonymous">
@@ -325,7 +354,7 @@
 
         <!-- Scroll Indicator -->
         <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
-            <a href="#features" class="text-white text-decoration-none">
+            <a href="#features" class="text-white text-decoration-none" title="Прокрутить вниз">
                 <div>
                     <i class="fas fa-chevron-down fs-4"></i>
                 </div>
@@ -352,7 +381,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card-modern hover-lift">
                         <div class="card-modern-body text-center">
-                            <div class="gradient-primary rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80" style="margin: 0 auto;">
+                            <div class="gradient-primary rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80">
                                 <i class="fas fa-wifi text-white fs-2"></i>
                             </div>
                             <h4 class="card-modern-title">Быстрый интернет</h4>
@@ -366,7 +395,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card-modern hover-lift">
                         <div class="card-modern-body text-center">
-                            <div class="gradient-secondary rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80" style="margin: 0 auto;">
+                            <div class="gradient-secondary rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80">
                                 <i class="fas fa-users text-white fs-2"></i>
                             </div>
                             <h4 class="card-modern-title">Комьюнити</h4>
@@ -380,7 +409,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card-modern hover-lift">
                         <div class="card-modern-body text-center">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80" style="margin: 0 auto; background: linear-gradient(135deg, #ff8c42, #ff6b1a);">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80 icon-circle-orange">
                                 <i class="fas fa-briefcase text-white fs-2"></i>
                             </div>
                             <h4 class="card-modern-title">Коворкинги</h4>
@@ -394,7 +423,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card-modern hover-lift">
                         <div class="card-modern-body text-center">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80" style="margin: 0 auto; background: linear-gradient(135deg, #20b2aa, #008b8b);">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80 icon-circle-teal">
                                 <i class="fas fa-map-marked-alt text-white fs-2"></i>
                             </div>
                             <h4 class="card-modern-title">Локальные гиды</h4>
@@ -408,7 +437,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card-modern hover-lift">
                         <div class="card-modern-body text-center">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80" style="margin: 0 auto; background: linear-gradient(135deg, #8e44ad, #9b59b6);">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80 icon-circle-purple">
                                 <i class="fas fa-shield-alt text-white fs-2"></i>
                             </div>
                             <h4 class="card-modern-title">Полная поддержка</h4>
@@ -422,7 +451,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card-modern hover-lift">
                         <div class="card-modern-body text-center">
-                            <div class="gradient-primary rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80" style="margin: 0 auto;">
+                            <div class="gradient-primary rounded-circle d-flex align-items-center justify-content-center mb-4 icon-circle-80">
                                 <i class="fas fa-dollar-sign text-white fs-2"></i>
                             </div>
                             <h4 class="card-modern-title">Лучшие цены</h4>
@@ -436,7 +465,7 @@
         </div>
     </section>
 
-    <!-- Popular Destinations Section -->
+    <!-- Popular Destinations Section - БОЛЬШЕ направлений -->
     <section id="destinations" class="py-5 bg-light">
         <div class="container">
             <div class="row text-center mb-5">
@@ -488,11 +517,11 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-3">
                                     <small class="text-muted">
-                                        <i class="fas fa-wifi me-1" style="color: #28a745;"></i>
+                                        <i class="fas fa-wifi me-1 text-success"></i>
                                         100 Мбит/с
                                     </small>
                                     <small class="text-muted">
-                                        <i class="fas fa-clock me-1" style="color: #17a2b8;"></i>
+                                        <i class="fas fa-clock me-1 text-info"></i>
                                         UTC+1
                                     </small>
                                 </div>
@@ -538,11 +567,11 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-3">
                                     <small class="text-muted">
-                                        <i class="fas fa-wifi me-1" style="color: #28a745;"></i>
+                                        <i class="fas fa-wifi me-1 text-success"></i>
                                         95 Мбит/с
                                     </small>
                                     <small class="text-muted">
-                                        <i class="fas fa-clock me-1" style="color: #17a2b8;"></i>
+                                        <i class="fas fa-clock me-1 text-info"></i>
                                         UTC+1
                                     </small>
                                 </div>
@@ -580,7 +609,7 @@
                             <div class="d-flex gap-2 mb-3">
                                 <span class="badge bg-warning">История</span>
                                 <span class="badge bg-success">Низкие цены</span>
-                                <span class="badge" style="background-color: #dc3545;">Пиво</span>
+                                <span class="badge bg-danger">Пиво</span>
                             </div>
                             <p class="card-modern-text">
                                 Сказочная архитектура, доступные цены и растущее IT-сообщество в сердце Европы.
@@ -588,11 +617,161 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex gap-3">
                                     <small class="text-muted">
-                                        <i class="fas fa-wifi me-1" style="color: #28a745;"></i>
+                                        <i class="fas fa-wifi me-1 text-success"></i>
                                         85 Мбит/с
                                     </small>
                                     <small class="text-muted">
-                                        <i class="fas fa-clock me-1" style="color: #17a2b8;"></i>
+                                        <i class="fas fa-clock me-1 text-info"></i>
+                                        UTC+1
+                                    </small>
+                                </div>
+                                <a href="#" class="btn btn-outline-modern btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 4: Berlin -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift">
+                        <div class="card-modern-header">
+                            <img src="https://images.unsplash.com/photo-1587330979470-3595ac045707?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Berlin for Digital Nomads" class="card-modern-image" loading="lazy" crossorigin="anonymous">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge gradient-secondary rounded-pill">
+                                    <i class="fas fa-star me-1"></i>
+                                    4.6
+                                </span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div class="text-white">
+                                        <h5 class="mb-1">Берлин, Германия</h5>
+                                        <small><i class="fas fa-map-marker-alt me-1"></i>Кройцберг, Митте</small>
+                                    </div>
+                                    <div class="text-white text-end">
+                                        <div class="fs-4 fw-bold">€1,300</div>
+                                        <small>/месяц</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-modern-body">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-info">Стартапы</span>
+                                <span class="badge bg-success">Культура</span>
+                                <span class="badge bg-warning">Техно</span>
+                            </div>
+                            <p class="card-modern-text">
+                                Столица стартапов Европы с невероятной культурной сценой и доступными ценами.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-wifi me-1 text-success"></i>
+                                        90 Мбит/с
+                                    </small>
+                                    <small class="text-muted">
+                                        <i class="fas fa-clock me-1 text-info"></i>
+                                        UTC+1
+                                    </small>
+                                </div>
+                                <a href="#" class="btn btn-outline-modern btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 5: Lisbon -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift">
+                        <div class="card-modern-header">
+                            <img src="https://images.unsplash.com/photo-1513735539099-cf6b5a6e8e16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Lisbon for Digital Nomads" class="card-modern-image" loading="lazy" crossorigin="anonymous">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge gradient-primary rounded-pill">
+                                    <i class="fas fa-star me-1"></i>
+                                    4.8
+                                </span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div class="text-white">
+                                        <h5 class="mb-1">Лиссабон, Португалия</h5>
+                                        <small><i class="fas fa-map-marker-alt me-1"></i>Принсипе Реал</small>
+                                    </div>
+                                    <div class="text-white text-end">
+                                        <div class="fs-4 fw-bold">€1,100</div>
+                                        <small>/месяц</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-modern-body">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-warning">Солнце</span>
+                                <span class="badge bg-info">Океан</span>
+                                <span class="badge bg-success">Трамваи</span>
+                            </div>
+                            <p class="card-modern-text">
+                                Солнечная столица с отличной погодой, дружелюбными местными жителями и растущим tech-сообществом.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-wifi me-1 text-success"></i>
+                                        85 Мбит/с
+                                    </small>
+                                    <small class="text-muted">
+                                        <i class="fas fa-clock me-1 text-info"></i>
+                                        UTC+1
+                                    </small>
+                                </div>
+                                <a href="#" class="btn btn-outline-modern btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 6: Vienna -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift">
+                        <div class="card-modern-header">
+                            <img src="https://images.unsplash.com/photo-1516550135131-fe3dcf8c8a95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vienna for Digital Nomads" class="card-modern-image" loading="lazy" crossorigin="anonymous">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge gradient-secondary rounded-pill">
+                                    <i class="fas fa-star me-1"></i>
+                                    4.7
+                                </span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div class="text-white">
+                                        <h5 class="mb-1">Вена, Австрия</h5>
+                                        <small><i class="fas fa-map-marker-alt me-1"></i>Инненштадт</small>
+                                    </div>
+                                    <div class="text-white text-end">
+                                        <div class="fs-4 fw-bold">€1,500</div>
+                                        <small>/месяц</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-modern-body">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-warning">Классика</span>
+                                <span class="badge bg-success">Качество жизни</span>
+                                <span class="badge bg-info">Кофе</span>
+                            </div>
+                            <p class="card-modern-text">
+                                Имперская архитектура, высочайшее качество жизни и традиционная кофейная культура.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-wifi me-1 text-success"></i>
+                                        95 Мбит/с
+                                    </small>
+                                    <small class="text-muted">
+                                        <i class="fas fa-clock me-1 text-info"></i>
                                         UTC+1
                                     </small>
                                 </div>
@@ -615,7 +794,7 @@
     <!-- CTA Section -->
     <section class="py-5 position-relative">
         <div class="gradient-primary w-100 h-100 position-absolute top-0 start-0"></div>
-        <div class="container position-relative" style="z-index: 2;">
+        <div class="container position-relative cta-container">
             <div class="row text-center text-white">
                 <div class="col-12">
                     <h2 class="display-5 fw-bold mb-4">
@@ -625,11 +804,11 @@
                         Присоединяйтесь к тысячам номадов, которые уже путешествуют с нами
                     </p>
                     <div class="d-flex gap-3 justify-content-center flex-wrap">
-                        <a href="#contact" class="btn btn-lg" style="background: white; color: var(--primary-green); border-color: white; padding: 12px 32px;">
+                        <a href="#contact" class="btn btn-lg cta-btn-white">
                             <i class="fas fa-paper-plane me-2"></i>
                             Забронировать сейчас
                         </a>
-                        <a href="#consultation" class="btn btn-lg" style="background: transparent; color: white; border: 2px solid white; padding: 12px 32px;">
+                        <a href="#consultation" class="btn btn-lg cta-btn-outline">
                             <i class="fas fa-phone me-2"></i>
                             Бесплатная консультация
                         </a>
@@ -667,6 +846,7 @@
                         <li><a href="#" class="text-muted text-decoration-none">Прага</a></li>
                         <li><a href="#" class="text-muted text-decoration-none">Берлин</a></li>
                         <li><a href="#" class="text-muted text-decoration-none">Лиссабон</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Вена</a></li>
                     </ul>
                 </div>
                 
@@ -704,7 +884,7 @@
                 </div>
             </div>
             
-            <hr style="margin: 2rem 0; border-color: #495057;">
+            <hr class="footer-hr">
             
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -712,7 +892,7 @@
                         &copy; 2025 Wanderlust Adventures. Все права защищены.
                     </p>
                 </div>
-                <div class="col-md-6" style="text-align: right;">
+                <div class="col-md-6 footer-text-right">
                     <p class="text-muted mb-0">
                         Создано с ❤️ для цифровых номадов
                     </p>

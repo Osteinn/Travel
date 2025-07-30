@@ -1,0 +1,20 @@
+# Исключаем библиотеки и минифицированные файлы
+.lib_hidden/
+*.min.css
+*.min.js
+*.backup
+
+# Исключаем системные файлы
+.DS_Store
+Thumbs.db
+
+# Исключаем временные файлы
+*.tmp
+*.temp
+
+# Исключаем логи
+*.log
+
+# VS Code настройки (оставляем только нужные)
+.vscode/launch.json
+.vscode/tasks.json

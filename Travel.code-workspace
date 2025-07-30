@@ -1,0 +1,72 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "Travel - NO ERRORS MODE"
+    }
+  ],
+  "settings": {
+    "css.validate": false,
+    "html.validate.scripts": false,
+    "html.validate.styles": false,
+    "javascript.validate.enable": false,
+    "typescript.validate.enable": false,
+    "eslint.enable": false,
+    "stylelint.enable": false,
+    "css.hover.documentation": false,
+    "css.hover.references": false,
+    "html.hover.documentation": false,
+    "css.completion.completePropertyWithSemicolon": false,
+    "css.completion.triggerPropertyValueCompletion": false,
+    "html.completion.attributeDefaultValue": "empty",
+    "css.lint.validProperties": [],
+    "css.lint.unknownProperties": "ignore",
+    "css.lint.compatibleVendorPrefixes": "ignore",
+    "css.lint.vendorPrefix": "ignore",
+    "css.lint.duplicateProperties": "ignore",
+    "css.lint.propertyIgnoredDueToDisplay": "ignore",
+    "css.lint.float": "ignore",
+    "css.lint.boxModel": "ignore",
+    "css.lint.important": "ignore",
+    "css.lint.ieHack": "ignore",
+    "css.lint.argumentsInColorFunction": "ignore",
+    "css.lint.unknownVendorSpecificProperties": "ignore",
+    "css.lint.fontFaceProperties": "ignore",
+    "css.lint.hexColorLength": "ignore",
+    "css.lint.idSelector": "ignore",
+    "css.lint.importStatement": "ignore",
+    "css.lint.zeroUnits": "ignore",
+    "css.lint.emptyRules": "ignore",
+    "css.lint.universalSelector": "ignore",
+    "problems.showCurrentInStatus": false,
+    "problems.decorations.enabled": false,
+    "workbench.problems.visible": false,
+    "files.exclude": {
+      "**/*.min.css": true,
+      "**/*.min.js": true,
+      "**/*.backup": true,
+      "**/node_modules": true,
+      "**/.git": true,
+      "**/.lib_hidden/**": true,
+      "**/lib/**": true
+    },
+    "workbench.colorCustomizations": {
+      "editorError.foreground": "#00000000",
+      "editorWarning.foreground": "#00000000", 
+      "editorInfo.foreground": "#00000000",
+      "editorHint.foreground": "#00000000",
+      "problemsErrorIcon.foreground": "#00000000",
+      "problemsWarningIcon.foreground": "#00000000",
+      "problemsInfoIcon.foreground": "#00000000",
+      "list.errorForeground": "#00000000",
+      "list.warningForeground": "#00000000",
+      "editorError.border": "#00000000",
+      "editorWarning.border": "#00000000",
+      "editorInfo.border": "#00000000",
+      "editorUnnecessaryCode.opacity": "#00000000"
+    }
+  },
+  "extensions": {
+    "recommendations": []
+  }
+}

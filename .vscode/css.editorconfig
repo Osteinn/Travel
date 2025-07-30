@@ -1,0 +1,21 @@
+# CSS линтинг правила для проекта Wanderlust Adventures
+
+[*.css]
+# Отключаем предупреждения о вендорных префиксах
+vendor-prefix = ignore
+compatible-vendor-prefixes = ignore
+unknown-properties = ignore
+duplicate-properties = ignore
+
+# Отключаем предупреждения о старых техниках
+float = ignore
+box-model = ignore
+important = ignore
+
+# Разрешённые свойства без предупреждений
+webkit-transform = allow
+webkit-transition = allow
+webkit-animation = allow
+webkit-keyframes = allow
+webkit-background-clip = allow
+webkit-backdrop-filter = allow

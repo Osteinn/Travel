@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wanderlust Adventures - Путешествия для цифровых номадов</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="путешествия, цифровые номады, удаленная работа, туры, экскурсии" name="keywords">
+    <meta content="Платформа для бронирования путешествий специально для цифровых номадов и удаленных работников" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Libraries -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Stylesheet -->
+    <link href="css/custom-theme.css" rel="stylesheet">
+
+    <!-- Original Template Stylesheet (for backward compatibility) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-icon.jpg" type="image/x-icon">
+
+    <!-- Meta tags for Social Media -->
+    <meta property="og:title" content="Wanderlust Adventures - Путешествия для цифровых номадов">
+    <meta property="og:description" content="Платформа для бронирования путешествий специально для цифровых номадов">
+    <meta property="og:image" content="img/social-preview.jpg">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wanderlust Adventures">
+    <meta name="twitter:description" content="Путешествия для цифровых номадов">
+</head>
+
+<body data-theme="light">
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="btn btn-outline-modern position-fixed">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
+    <!-- Loading Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border spinner-custom" role="status">
+            <span class="sr-only">Загрузка...</span>
+        </div>
+    </div>
+
+    <!-- Modern Header -->
+    <header class="glass-effect position-fixed w-100 header-fixed">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <div class="gradient-primary p-2 rounded-circle me-3">
+                        <i class="fas fa-plane text-white fs-4"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-0 text-gradient">Wanderlust</h5>
+                        <small class="text-muted">Adventures</small>
+                    </div>
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="#home">Главная</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
+                                Направления
+                            </a>
+                            <ul class="dropdown-menu border-0 shadow-lg">
+                                <li><a class="dropdown-item" href="#destinations">Популярные маршруты</a></li>
+                                <li><a class="dropdown-item" href="#workspaces">Коворкинг-туры</a></li>
+                                <li><a class="dropdown-item" href="#retreats">Ретриты для номадов</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="#services">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="#about">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="#contact">Контакты</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- CTA Button -->
+                    <div class="d-flex gap-2">
+                        <a href="#booking" class="btn btn-outline-modern">
+                            <i class="fas fa-search me-1"></i>
+                            Поиск туров
+                        </a>
+                        <a href="#contact" class="btn btn-primary-modern">
+                            <i class="fas fa-paper-plane me-1"></i>
+                            Забронировать
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="position-relative hero-section">
+        <div class="position-absolute w-100 h-100">
+            <img src="img/carousel-1.jpg" class="w-100 h-100 object-fit-cover" alt="Digital Nomad Hero">
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="container position-relative h-100 d-flex align-items-center hero-container">
+            <div class="row w-100">
+                <div class="col-lg-6">
+                    <div class="animate-slideInLeft">
+                        <h1 class="display-3 text-white fw-bold mb-4">
+                            Работай откуда угодно,<br>
+                            <span class="text-gradient">путешествуй везде</span>
+                        </h1>
+                        <p class="lead text-white mb-5 fs-5">
+                            Специально созданные туры для цифровых номадов. Совмещайте работу с путешествиями, 
+                            знакомьтесь с единомышленниками и открывайте новые горизонты.
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#destinations" class="btn btn-primary-modern btn-lg">
+                                <i class="fas fa-compass me-2"></i>
+                                Исследовать маршруты
+                            </a>
+                            <a href="#about" class="btn btn-outline-modern btn-lg hero-outline-btn">
+                                <i class="fas fa-play me-2"></i>
+                                Смотреть видео
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="animate-slideInRight">
+                        <!-- Search Widget -->
+                        <div class="card-modern glass-effect p-4 mt-5">
+                            <h4 class="text-white mb-4">
+                                <i class="fas fa-search me-2"></i>
+                                Найти идеальный тур
+                            </h4>
+                            <form id="hero-search">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">Направление</label>
+                                        <select class="form-select">
+                                            <option>Бали, Индонезия</option>
+                                            <option>Лиссабон, Португалия</option>
+                                            <option>Мехико, Мексика</option>
+                                            <option>Тбилиси, Грузия</option>
+                                            <option>Чиангмай, Таиланд</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">Длительность</label>
+                                        <select class="form-select">
+                                            <option>1-2 недели</option>
+                                            <option>1 месяц</option>
+                                            <option>2-3 месяца</option>
+                                            <option>6+ месяцев</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">Бюджет</label>
+                                        <select class="form-select">
+                                            <option>$500-1000/мес</option>
+                                            <option>$1000-2000/мес</option>
+                                            <option>$2000+/мес</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">Тип жилья</label>
+                                        <select class="form-select">
+                                            <option>Коливинг</option>
+                                            <option>Отель</option>
+                                            <option>Апартаменты</option>
+                                            <option>Хостел</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-secondary-modern w-100 btn-lg">
+                                            <i class="fas fa-search me-2"></i>
+                                            Найти туры
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+            <a href="#features" class="text-white text-decoration-none">
+                <div class="animate-bounce">
+                    <i class="fas fa-chevron-down fs-3"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 features-section">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3 animate-slideInUp">
+                        Почему выбирают 
+                        <span class="text-gradient">Wanderlust?</span>
+                    </h2>
+                    <p class="lead text-muted animate-slideInUp">
+                        Мы создаем уникальные путешествия для современных цифровых кочевников
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift animate-slideInUp">
+                        <div class="card-modern-body text-center">
+                            <div class="gradient-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4 icon-circle-80">
+                                <i class="fas fa-wifi text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-modern-title">Быстрый интернет</h4>
+                            <p class="card-modern-text">
+                                Все наши локации проверены на скорость интернета. Минимум 50 Мбит/с для комфортной работы.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift animate-slideInUp animation-delay-1">
+                        <div class="card-modern-body text-center">
+                            <div class="gradient-secondary rounded-circle d-inline-flex align-items-center justify-content-center mb-4 icon-circle-80">
+                                <i class="fas fa-users text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-modern-title">Комьюнити</h4>
+                            <p class="card-modern-text">
+                                Присоединяйтесь к сообществу единомышленников. Нетворкинг, совместная работа, дружба.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift animate-slideInUp animation-delay-2">
+                        <div class="card-modern-body text-center">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-4 icon-circle-80 accent-orange-bg">
+                                <i class="fas fa-briefcase text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-modern-title">Коворкинги</h4>
+                            <p class="card-modern-text">
+                                Доступ к лучшим коворкинг-пространствам в каждом городе. Продуктивная рабочая среда.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift animate-slideInUp animation-delay-3">
+                        <div class="card-modern-body text-center">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-4 icon-circle-80 accent-teal-bg">
+                                <i class="fas fa-map-marked-alt text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-modern-title">Локальные гиды</h4>
+                            <p class="card-modern-text">
+                                Персональные гиды-номады, которые покажут скрытые жемчужины каждого города.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift animate-slideInUp animation-delay-4">
+                        <div class="card-modern-body text-center">
+                            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-4 icon-circle-80 accent-purple-bg">
+                                <i class="fas fa-shield-alt text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-modern-title">Полная поддержка</h4>
+                            <p class="card-modern-text">
+                                24/7 поддержка, помощь с визами, страховкой, решение любых вопросов в пути.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift animate-slideInUp animation-delay-5">
+                        <div class="card-modern-body text-center">
+                            <div class="gradient-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4 icon-circle-80">
+                                <i class="fas fa-dollar-sign text-white fs-2"></i>
+                            </div>
+                            <h4 class="card-modern-title">Лучшие цены</h4>
+                            <p class="card-modern-text">
+                                Групповые скидки, долгосрочные договоры с отелями, эксклюзивные предложения.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section id="destinations" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-3">
+                        Топовые направления для 
+                        <span class="text-gradient">номадов</span>
+                    </h2>
+                    <p class="lead text-muted">
+                        Исследуйте самые популярные города среди цифровых кочевников
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Destination 1: Bali -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift">
+                        <div class="card-modern-header">
+                            <img src="img/carousel-2.jpg" alt="Bali for Digital Nomads" class="card-modern-image">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge gradient-primary rounded-pill px-3 py-2">
+                                    <i class="fas fa-star me-1"></i>
+                                    4.9
+                                </span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div class="text-white">
+                                        <h5 class="mb-1">Бали, Индонезия</h5>
+                                        <small><i class="fas fa-map-marker-alt me-1"></i>Убуд, Чангу</small>
+                                    </div>
+                                    <div class="text-white text-end">
+                                        <div class="fs-4 fw-bold">$800</div>
+                                        <small>/месяц</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-modern-body">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-success">Низкая стоимость</span>
+                                <span class="badge bg-info">Тропики</span>
+                                <span class="badge bg-warning">Йога</span>
+                            </div>
+                            <p class="card-modern-text">
+                                Идеальное сочетание джунглей, пляжей и духовности. Огромное комьюнити номадов, отличные коворкинги.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-wifi text-success me-1"></i>
+                                        80 Мбит/с
+                                    </small>
+                                    <small class="text-muted">
+                                        <i class="fas fa-clock text-info me-1"></i>
+                                        UTC+8
+                                    </small>
+                                </div>
+                                <a href="#" class="btn btn-outline-modern btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 2: Lisbon -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift">
+                        <div class="card-modern-header">
+                            <img src="img/about-img-1.jpg" alt="Lisbon for Digital Nomads" class="card-modern-image">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge gradient-secondary rounded-pill px-3 py-2">
+                                    <i class="fas fa-star me-1"></i>
+                                    4.8
+                                </span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div class="text-white">
+                                        <h5 class="mb-1">Лиссабон, Португалия</h5>
+                                        <small><i class="fas fa-map-marker-alt me-1"></i>Принсипе Реал</small>
+                                    </div>
+                                    <div class="text-white text-end">
+                                        <div class="fs-4 fw-bold">$1,200</div>
+                                        <small>/месяц</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-modern-body">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-primary">Европа</span>
+                                <span class="badge bg-success">Безопасно</span>
+                                <span class="badge bg-info">Культура</span>
+                            </div>
+                            <p class="card-modern-text">
+                                Европейский шарм, отличная погода круглый год, развитая инфраструктура и дружелюбные местные жители.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-wifi text-success me-1"></i>
+                                        100 Мбит/с
+                                    </small>
+                                    <small class="text-muted">
+                                        <i class="fas fa-clock text-info me-1"></i>
+                                        UTC+1
+                                    </small>
+                                </div>
+                                <a href="#" class="btn btn-outline-modern btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destination 3: Mexico City -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-modern hover-lift">
+                        <div class="card-modern-header">
+                            <img src="img/blog-1.jpg" alt="Mexico City for Digital Nomads" class="card-modern-image">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge gradient-primary rounded-pill px-3 py-2">
+                                    <i class="fas fa-star me-1"></i>
+                                    4.7
+                                </span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <div class="text-white">
+                                        <h5 class="mb-1">Мехико, Мексика</h5>
+                                        <small><i class="fas fa-map-marker-alt me-1"></i>Рома Норте</small>
+                                    </div>
+                                    <div class="text-white text-end">
+                                        <div class="fs-4 fw-bold">$900</div>
+                                        <small>/месяц</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-modern-body">
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-warning">Культура</span>
+                                <span class="badge bg-success">США/МСТ</span>
+                                <span class="badge bg-danger">Еда</span>
+                            </div>
+                            <p class="card-modern-text">
+                                Мегаполис с богатой историей, невероятной кухней и растущим сообществом номадов.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-3">
+                                    <small class="text-muted">
+                                        <i class="fas fa-wifi text-success me-1"></i>
+                                        60 Мбит/с
+                                    </small>
+                                    <small class="text-muted">
+                                        <i class="fas fa-clock text-info me-1"></i>
+                                        UTC-6
+                                    </small>
+                                </div>
+                                <a href="#" class="btn btn-outline-modern btn-sm">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary-modern btn-lg">
+                    <i class="fas fa-map me-2"></i>
+                    Посмотреть все направления
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 position-relative">
+        <div class="gradient-primary w-100 h-100 position-absolute top-0 start-0"></div>
+        <div class="container position-relative cta-container">
+            <div class="row text-center text-white">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold mb-4">
+                        Готовы начать своё приключение?
+                    </h2>
+                    <p class="lead mb-5 fs-4">
+                        Присоединяйтесь к тысячам номадов, которые уже путешествуют с нами
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="#contact" class="btn btn-lg px-5 py-3 cta-btn-white">
+                            <i class="fas fa-paper-plane me-2"></i>
+                            Забронировать сейчас
+                        </a>
+                        <a href="#consultation" class="btn btn-outline-light btn-lg px-5 py-3">
+                            <i class="fas fa-phone me-2"></i>
+                            Бесплатная консультация
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="gradient-primary p-2 rounded-circle me-3">
+                            <i class="fas fa-plane text-white fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 text-gradient">Wanderlust</h5>
+                            <small class="text-muted">Adventures</small>
+                        </div>
+                    </div>
+                    <p class="text-muted mb-4">
+                        Мы создаем незабываемые путешествия для цифровых номадов по всему миру. 
+                        Работайте откуда угодно, путешествуйте везде.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light btn-sm" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Направления</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Бали</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Лиссабон</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Мехико</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Тбилиси</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Чиангмай</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Услуги</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Коворкинг-туры</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Номад-ретриты</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Виза-саппорт</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Страхование</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Консультации</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Компания</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">О нас</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Блог</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Карьера</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Пресс-центр</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Партнеры</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Поддержка</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Контакты</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Политика</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Условия</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Помощь</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">
+                        &copy; 2025 Wanderlust Adventures. Все права защищены.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">
+                        Создано с ❤️ для цифровых номадов
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary-modern back-to-top" title="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wanderlust.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Theme toggle functionality
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            const icon = document.getElementById('theme-icon');
+            
+            html.setAttribute('data-theme', newTheme);
+            icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            
+            // Save preference
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.getElementById('theme-icon').className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Hero search form
+        document.getElementById('hero-search').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add search functionality here
+            alert('Поиск будет реализован в следующей версии!');
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('header');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.25)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            }
+        });
+    </script>
+</body>
+
+</html>
